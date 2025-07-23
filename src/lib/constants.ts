@@ -12,14 +12,14 @@ export const SITE_CONFIG = {
 export const PROJECTS: Project[] = [
   {
     id: 'mise-cooking',
-    title: 'AI Recipe Web App',
+    title: 'Mise',
     description: 'Seamless AI-powered cooking experience with intelligent recipe generation',
     longDescription: 'A comprehensive web application that leverages AI to provide personalized cooking experiences, featuring intelligent recipe generation, nutritional analysis, and interactive cooking guidance.',
     technologies: ['Next.js', 'TypeScript', 'AI Integration', 'T3 Stack', 'Tailwind CSS'],
     githubUrl: 'https://github.com/rknm-cell/mise-cooking',
     liveUrl: 'https://nutrichef-ai.vercel.app',
-    imageUrl: '/projects/mise-cooking.jpg',
-    featured: true,
+    imageUrl: 'https://api.microlink.io?url=https://nutrichef-ai.vercel.app&screenshot=true&meta=false&embed=screenshot.url',
+     featured: true,
     category: 'ai',
     caseStudy: {
       problem: 'Users struggle to find recipes that match their dietary preferences and available ingredients',

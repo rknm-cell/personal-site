@@ -1,3 +1,5 @@
+"use client";
+
 import { ExternalLink, Github } from 'lucide-react';
 import { Section } from '~/components/ui/Section';
 import { Button } from '~/components/ui/Button';
@@ -20,13 +22,31 @@ export function Projects() {
         {PROJECTS.map((project) => (
           <Card key={project.id} className="overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Project Image Placeholder */}
-              <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">📱</div>
-                  <p>Project Screenshot</p>
-                  <p className="text-sm">{project.title}</p>
-                </div>
+              {/* Project Image */}
+              <div className="space-y-4">
+                {project.imageUrl ? (
+                  <div className="bg-gray-100 rounded-lg overflow-hidden">
+                    <div className="bg-gray-200 px-4 py-2 text-sm text-gray-600 border-b">
+                      Live Preview - {project.title}
+                    </div>
+                    <div className="relative h-96">
+                      <img
+                        src={project.imageUrl}
+                        alt={`Screenshot of ${project.title}`}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <div className="text-4xl mb-2">📱</div>
+                      <p>Project Screenshot</p>
+                      <p className="text-sm">{project.title}</p>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Project Details */}
