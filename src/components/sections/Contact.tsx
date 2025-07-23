@@ -1,3 +1,5 @@
+"use client";
+
 import { Mail, Github, Linkedin } from 'lucide-react';
 import { Section } from '~/components/ui/Section';
 import { Button } from '~/components/ui/Button';
@@ -11,8 +13,8 @@ export function Contact() {
           Get In Touch
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          I'm always interested in new opportunities and collaborations. 
-          Let's discuss how we can work together.
+          I&apos;m always interested in new opportunities and collaborations. 
+          Let&apos;s discuss how we can work together.
         </p>
       </div>
 
@@ -77,7 +79,7 @@ export function Contact() {
 
           <div className="mt-8 pt-8 border-t border-gray-200 text-center">
             <p className="text-gray-600 mb-4">
-              Let's discuss your project or explore collaboration opportunities
+              Let&apos;s discuss your project or explore collaboration opportunities
             </p>
             <Button
               href={`mailto:${SITE_CONFIG.email}?subject=Portfolio Inquiry`}

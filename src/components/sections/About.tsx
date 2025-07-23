@@ -1,3 +1,5 @@
+"use client";
+
 import { Section } from '~/components/ui/Section';
 
 export function About() {
@@ -10,15 +12,15 @@ export function About() {
           </h2>
           <div className="space-y-4 text-gray-600">
             <p>
-              I'm a Design Engineer with a unique background that bridges the gap between 
+              I&apos;m a Design Engineer with a unique background that bridges the gap between 
               artistic creativity and technical innovation. With 4 years of experience at SFDS 
-              in Brooklyn, NY, I've evolved from an artist to a technical specialist, 
+              in Brooklyn, NY, I&apos;ve evolved from an artist to a technical specialist, 
               specializing in 3D printing and high-profile client projects.
             </p>
             <p>
               My work spans from experiential marketing design for major brands like Dior, 
-              Hermes, and Ogilvy, to sculptural pieces for Madame Tussaud's and Mariah Carey. 
-              I've also contributed to innovative projects for Pfizer and Rivian, creating 
+              Hermes, and Ogilvy, to sculptural pieces for Madame Tussaud&apos;s and Mariah Carey. 
+              I&apos;ve also contributed to innovative projects for Pfizer and Rivian, creating 
               custom 3D printing solutions and automotive design components.
             </p>
             <p>
@@ -37,7 +39,7 @@ export function About() {
             </li>
             <li className="flex items-start">
               <span className="text-green-600 mr-2">•</span>
-              High-profile client work: Dior, Hermes, Ogilvy, Madame Tussaud's
+              High-profile client work: Dior, Hermes, Ogilvy, Madame Tussaud&apos;s
             </li>
             <li className="flex items-start">
               <span className="text-green-600 mr-2">•</span>
