@@ -1,11 +1,14 @@
 import { Button } from '~/components/ui/Button';
 import { Section } from '~/components/ui/Section';
 import { SITE_CONFIG } from '~/lib/constants';
+import { HelmetBackground } from '~/components/3d/HelmetBackground';
 
 export function Hero() {
   return (
-    <Section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-gray-50">
-      <div className="text-center max-w-4xl mx-auto">
+    <Section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white/90 to-gray-50/90 relative overflow-hidden">
+      <HelmetBackground />
+      
+      <div className="text-center max-w-4xl mx-auto relative z-10">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6">
           {SITE_CONFIG.name}
         </h1>
