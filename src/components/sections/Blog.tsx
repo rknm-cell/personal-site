@@ -1,3 +1,5 @@
+"use client";
+
 import { Section } from '~/components/ui/Section';
 import { Button } from '~/components/ui/Button';
 
@@ -20,7 +22,7 @@ export function Blog() {
             Coming Soon
           </h3>
           <p className="text-gray-600 mb-6">
-            I'm working on sharing insights about AI integration, design processes, 
+            I&apos;m working on sharing insights about AI integration, design processes, 
             and technical challenges. Check back soon for articles and tutorials.
           </p>
           <Button variant="outline" disabled>

@@ -2,6 +2,7 @@
 
 import { Section } from '~/components/ui/Section';
 import { SKILLS } from '~/lib/constants';
+import type { Skill } from '~/types';
 
 const categoryLabels = {
   frontend: 'Frontend Development',
@@ -13,12 +14,10 @@ const categoryLabels = {
 
 export function Skills() {
   const skillsByCategory = SKILLS.reduce((acc, skill) => {
-    if (!acc[skill.category]) {
-      acc[skill.category] = [];
-    }
-    acc[skill.category].push(skill);
+    acc[skill.category] ??= [];
+    acc[skill.category]!.push(skill);
     return acc;
-  }, {} as Record<string, typeof SKILLS>);
+  }, {} as Record<string, Skill[]>);
 
   return (
     <Section id="skills" className="bg-gray-50">
