@@ -7,9 +7,6 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        'forest-green': '#228B22',
-      },
       fontFamily: {
         sans: ['var(--font-geist-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },

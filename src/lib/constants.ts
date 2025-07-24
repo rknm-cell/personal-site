@@ -3,8 +3,8 @@ import type { Project, Skill, Experience } from '~/types';
 export const SITE_CONFIG = {
   name: 'Peter Yelton',
   title: 'Design Engineer',
-  description: 'Design Engineer specializing in AI integration, full-stack development, and 3D design',
-  email: 'peter@example.com',
+  description: 'Design Engineer specializing in AI integration, full-stack development with an eye for design',
+  email: 'peteryelton@gmail.com',
   linkedin: 'https://linkedin.com/in/peteryelton',
   github: 'https://github.com/rknm-cell',
 } as const;
@@ -68,10 +68,8 @@ export const EXPERIENCE: Experience[] = [
         position: 'AI Engineer',
         location: 'Brooklyn, NY',
         duration: 'May 2025 - Present',
-        description: 'Developed AI-powered solutions, including AI-powered design tools and AI-powered marketing tools.',
+        description: 'Developed Full-Stack AI-powered applications',
         achievements: [
-            'Developed AI-powered design tools for Fractal Tech',
-            'Developed AI-powered marketing tools for Fractal Tech'
         ],
         technologies: ['Vercel AI SDK', 'Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Node.js', 'Express', 'PostgreSQL', 'Prisma']
     },
@@ -88,28 +86,14 @@ export const EXPERIENCE: Experience[] = [
       'Specialized in MSLA and FDM 3D printing technologies'
     ],
     technologies: ['3D Printing', 'Blender', 'Design Software', 'Project Management']
-  },
-  {
-    id: 'freelance',
-    company: 'Freelance',
-    position: 'Artist',
-    location: 'Brooklyn, NY',
-    duration: 'May 2021 - May 2025',
-    description: 'Independent design and development work for various clients.',
-    achievements: [
-      'Created sculptural pieces for Pfizer',
-      'Designed components for Rivian automotive projects',
-      'Provided technical consulting for design projects'
-    ],
-    technologies: ['3D Printing', 'Custom Design', 'Client Management', 'Technical Consulting']
   }
 ];
 
 export const NAVIGATION = [
   { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Blog', href: '#blog' },
   { name: 'Contact', href: '#contact' }
 ] as const; 
