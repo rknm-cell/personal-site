@@ -1,7 +1,9 @@
 "use client";
 
 import { type ButtonHTMLAttributes, forwardRef } from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '~/lib/utils';
+import { useIsMobile } from '~/lib/hooks';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
@@ -13,6 +15,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', href, ...props }, ref) => {
+    const isMobile = useIsMobile();
+    const shouldAnimate = !isMobile;
+
     const baseClasses = cn(
       'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
       {
@@ -29,25 +34,39 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       className
     );
 
+    const MotionComponent = shouldAnimate ? motion.div : 'div';
+
     if (href) {
       return (
-        <a
-          href={href}
-          className={baseClasses}
-          target={props.target}
-          rel={props.rel}
+        <MotionComponent
+          whileHover={shouldAnimate ? { scale: 1.05 } : undefined}
+          whileTap={shouldAnimate ? { scale: 0.95 } : undefined}
+          transition={{ duration: 0.2 }}
         >
-          {props.children}
-        </a>
+          <a
+            href={href}
+            className={baseClasses}
+            target={props.target}
+            rel={props.rel}
+          >
+            {props.children}
+          </a>
+        </MotionComponent>
       );
     }
 
     return (
-      <button
-        className={baseClasses}
-        ref={ref}
-        {...props}
-      />
+      <MotionComponent
+        whileHover={shouldAnimate ? { scale: 1.05 } : undefined}
+        whileTap={shouldAnimate ? { scale: 0.95 } : undefined}
+        transition={{ duration: 0.2 }}
+      >
+        <button
+          className={baseClasses}
+          ref={ref}
+          {...props}
+        />
+      </MotionComponent>
     );
   }
 );

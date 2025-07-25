@@ -12,9 +12,9 @@ export default function HomePage() {
     <Layout>
       <Hero />
       <About />
-      <Skills />
       <Experience />
       <Projects />
+      <Skills />
       <Blog />
       <Contact />
     </Layout>

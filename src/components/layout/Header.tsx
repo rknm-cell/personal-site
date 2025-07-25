@@ -2,11 +2,18 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { NAVIGATION } from '~/lib/constants';
 import { Button } from '~/components/ui/Button';
+import { useActiveSection, useIsMobile } from '~/lib/hooks';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const activeSection = useActiveSection();
+  const isMobile = useIsMobile();
+
+  // Don't show animations on mobile
+  const shouldAnimate = !isMobile;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
@@ -20,16 +27,32 @@ export function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {NAVIGATION.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-600 hover:text-black transition-colors"
-              >
-                {item.name}
-              </a>
-            ))}
+          <nav className="hidden md:flex items-center space-x-8 relative">
+            {NAVIGATION.map((item) => {
+              const isActive = activeSection === item.href.substring(1);
+              return (
+                <div key={item.name} className="relative">
+                  <a
+                    href={item.href}
+                    className={`relative z-10 px-3 py-2 rounded-md transition-colors duration-200 ${
+                      isActive 
+                        ? 'text-black font-medium' 
+                        : 'text-gray-600 hover:text-black'
+                    }`}
+                  >
+                    {item.name}
+                  </a>
+                  {isActive && shouldAnimate && (
+                    <motion.div
+                      layoutId="activeSection"
+                      className="absolute inset-0 bg-gray-100 rounded-md"
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                    />
+                  )}
+                </div>
+              );
+            })}
           </nav>
 
           {/* Mobile Menu Button */}

@@ -1,24 +1,6 @@
-@import "tailwindcss";
-
-@theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  
-  /* Custom color palette */
-  --color-forest-green: #228B22;
-  --color-black: #000000;
-  --color-white: #FFFFFF;
-  --color-gray-50: #F9FAFB;
-  --color-gray-100: #F3F4F6;
-  --color-gray-200: #E5E7EB;
-  --color-gray-300: #D1D5DB;
-  --color-gray-400: #9CA3AF;
-  --color-gray-500: #6B7280;
-  --color-gray-600: #4B5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1F2937;
-  --color-gray-900: #111827;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -26,16 +8,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-gray-100);
+  background: #F3F4F6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-forest-green);
+  background: #6B7280;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1a6b1a;
+  background: #4B5563;
 }
 
 /* Smooth scrolling */
@@ -103,34 +85,14 @@ html {
   animation: slideInRight 0.6s ease-out;
 }
 
-/* Whimsical elements */
-.whimsical-border {
-  border: 2px solid var(--color-forest-green);
-  border-radius: 12px;
-  position: relative;
-}
-
-.whimsical-border::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  border: 1px solid var(--color-forest-green);
-  border-radius: 16px;
-  opacity: 0.3;
-  z-index: -1;
-}
-
 /* Focus styles for accessibility */
 *:focus {
-  outline: 2px solid var(--color-forest-green);
+  outline: 2px solid #6B7280;
   outline-offset: 2px;
 }
 
 /* Selection styles */
 ::selection {
-  background-color: var(--color-forest-green);
-  color: var(--color-white);
+  background-color: #6B7280;
+  color: #FFFFFF;
 }

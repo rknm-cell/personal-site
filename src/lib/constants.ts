@@ -3,8 +3,8 @@ import type { Project, Skill, Experience } from '~/types';
 export const SITE_CONFIG = {
   name: 'Peter Yelton',
   title: 'Design Engineer',
-  description: 'Design Engineer specializing in AI integration, full-stack development, and 3D design',
-  email: 'peter@example.com',
+  description: 'Design Engineer specializing in AI integration, full-stack development with an eye for design',
+  email: 'peteryelton@gmail.com',
   linkedin: 'https://linkedin.com/in/peteryelton',
   github: 'https://github.com/rknm-cell',
 } as const;
@@ -63,12 +63,22 @@ export const SKILLS: Skill[] = [
 ];
 
 export const EXPERIENCE: Experience[] = [
+    {id: 'fractal',
+        company: 'Fractal Tech AI Accelarator',
+        position: 'AI Engineer',
+        location: 'Brooklyn, NY',
+        duration: 'May 2025 - Present',
+        description: 'Developed Full-Stack AI-powered applications',
+        achievements: [
+        ],
+        technologies: ['Vercel AI SDK', 'Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Node.js', 'Express', 'PostgreSQL', 'Prisma']
+    },
   {
     id: 'sfds',
     company: 'SFDS',
     position: 'Casting & Mold Artist | 3D Printing Engineer',
     location: 'Brooklyn, NY',
-    duration: '4 years',
+    duration: 'May 2021 - February 2025',
     description: 'Started as an artist and progressed to technical roles, specializing in 3D printing and high-profile client projects.',
     achievements: [
       'Led design and production for major brands including Dior, Hermes, and Ogilvy',
@@ -76,29 +86,14 @@ export const EXPERIENCE: Experience[] = [
       'Specialized in MSLA and FDM 3D printing technologies'
     ],
     technologies: ['3D Printing', 'Blender', 'Design Software', 'Project Management']
-  },
-  {
-    id: 'freelance',
-    company: 'Freelance',
-    position: 'Artist',
-    location: 'Brooklyn, NY',
-    duration: 'Ongoing',
-    description: 'Independent design and development work for various clients.',
-    achievements: [
-      'Created sculptural pieces for Pfizer',
-      'Designed components for Rivian automotive projects',
-      'Developed custom 3D printing solutions',
-      'Provided technical consulting for design projects'
-    ],
-    technologies: ['3D Printing', 'Custom Design', 'Client Management', 'Technical Consulting']
   }
 ];
 
 export const NAVIGATION = [
   { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Blog', href: '#blog' },
   { name: 'Contact', href: '#contact' }
 ] as const; 
