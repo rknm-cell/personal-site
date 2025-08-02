@@ -1,13 +1,11 @@
-/** @type {import("next").NextConfig} */
+/** @type {import('next').NextConfig} */
 const config = {
-  typescript: {
-    // Ignore TypeScript errors during build to avoid build manifest issues
-    ignoreBuildErrors: true,
+  images: {
+    formats: ['image/webp', 'image/avif'],
   },
-  eslint: {
-    // Ignore ESLint errors during build
-    ignoreDuringBuilds: true,
-  },
-};
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+}
 
-export default config;
+export default config
