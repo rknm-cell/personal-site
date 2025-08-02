@@ -12,23 +12,23 @@ import { Award, Users, Palette, Code, Zap } from 'lucide-react';
 
 export function About() {
   return (
-    <Section id="about" className="bg-white">
+    <Section id="about" className="bg-isabelline-500">
       <AnimatedSection>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="flex items-center gap-4 mb-6">
-              <Avatar className="h-12 w-12 border-2 border-gray-200">
+              <Avatar className="h-12 w-12 border-2 border-timberwolf-300">
                 <AvatarImage src="/avatar.jpg" alt={SITE_CONFIG.name} />
-                <AvatarFallback className="text-sm font-bold bg-gray-100 text-gray-700">
+                <AvatarFallback className="text-sm font-bold bg-timberwolf-100 text-isabelline-500">
                   {SITE_CONFIG.name.split(' ').map(n => n[0]).join('')}
                 </AvatarFallback>
               </Avatar>
-              <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <h2 className="text-3xl md:text-4xl font-bold text-timberwolf-100">
                 About Me
               </h2>
             </div>
             
-            <div className="space-y-4 text-gray-600">
+            <div className="space-y-4 text-timberwolf-200">
               <p>
                 I&apos;m a Design Engineer with a unique background that bridges the gap between 
                 artistic creativity and technical innovation. With 4 years of experience at SFDS 
@@ -110,29 +110,29 @@ export function About() {
             </div>
           </div>
 
-          <Card className="border-0 shadow-lg bg-gray-50">
+          <Card className="border-0 shadow-lg bg-isabelline-600">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-xl font-semibold text-black">
-                <Award size={20} className="text-blue-600" />
+              <CardTitle className="flex items-center gap-2 text-xl font-semibold text-timberwolf-100">
+                <Award size={20} className="text-linen-400" />
                 Key Highlights
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-gray-600">
+              <ul className="space-y-3 text-timberwolf-200">
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2 font-bold">•</span>
+                  <span className="text-linen-400 mr-2 font-bold">•</span>
                   Full-stack development with AI integration focus
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2 font-bold">•</span>
+                  <span className="text-linen-400 mr-2 font-bold">•</span>
                   4 years at SFDS (Brooklyn, NY) - Artist to Technical Specialist
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2 font-bold">•</span>
+                  <span className="text-linen-400 mr-2 font-bold">•</span>
                   High-profile client work: Dior, Hermes, Ogilvy, Madame Tussaud&apos;s
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2 font-bold">•</span>
+                  <span className="text-linen-400 mr-2 font-bold">•</span>
                   Freelance projects for Pfizer and Rivian
                 </li>
               </ul>

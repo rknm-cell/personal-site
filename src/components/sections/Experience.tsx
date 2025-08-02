@@ -12,34 +12,34 @@ import { Building2, MapPin, Calendar, Award, Code } from 'lucide-react';
 
 export function Experience() {
   return (
-    <Section id="experience" className="bg-white">
+    <Section id="experience" className="bg-isabelline-500">
       <AnimatedSection>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-timberwolf-100 mb-4">
             Experience
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-timberwolf-200 max-w-2xl mx-auto">
             My professional journey from artistic design to technical engineering
           </p>
         </div>
 
         <div className="space-y-8">
           {EXPERIENCE.map((experience, index) => (
-            <Card key={experience.id} className="border-0 shadow-lg bg-gray-50">
+            <Card key={experience.id} className="border-0 shadow-lg bg-isabelline-600">
               <CardHeader className="pb-4">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="flex items-center gap-4">
-                    <Avatar className="h-12 w-12 border-2 border-gray-200">
+                    <Avatar className="h-12 w-12 border-2 border-timberwolf-300">
                       <AvatarImage src={`/companies/${experience.id}.jpg`} alt={experience.company} />
-                      <AvatarFallback className="text-sm font-bold bg-gray-100 text-gray-700">
+                      <AvatarFallback className="text-sm font-bold bg-timberwolf-100 text-isabelline-500">
                         <Building2 size={16} />
                       </AvatarFallback>
                     </Avatar>
                     <div>
-                      <CardTitle className="text-2xl font-bold text-black">
+                      <CardTitle className="text-2xl font-bold text-timberwolf-100">
                         {experience.position}
                       </CardTitle>
-                      <p className="text-xl text-gray-600">
+                      <p className="text-xl text-timberwolf-200">
                         {experience.company}
                       </p>
                       <Badge variant="secondary" className="mt-1 text-xs">
@@ -48,11 +48,11 @@ export function Experience() {
                     </div>
                   </div>
                   <div className="flex flex-col items-start md:items-end gap-1 mt-4 md:mt-0">
-                    <div className="flex items-center gap-1 text-gray-600">
+                    <div className="flex items-center gap-1 text-timberwolf-200">
                       <MapPin size={14} />
                       <span className="text-sm">{experience.location}</span>
                     </div>
-                    <div className="flex items-center gap-1 text-gray-600">
+                    <div className="flex items-center gap-1 text-timberwolf-200">
                       <Calendar size={14} />
                       <span className="text-sm">{experience.duration}</span>
                     </div>
@@ -61,7 +61,7 @@ export function Experience() {
               </CardHeader>
               
               <CardContent>
-                <p className="text-gray-700 mb-6">
+                <p className="text-timberwolf-200 mb-6">
                   {experience.description}
                 </p>
 
@@ -70,16 +70,16 @@ export function Experience() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <Award size={18} className="text-blue-600" />
-                      <h4 className="text-lg font-semibold text-black">
+                      <Award size={18} className="text-linen-400" />
+                      <h4 className="text-lg font-semibold text-timberwolf-100">
                         Key Achievements
                       </h4>
                     </div>
                     <ul className="space-y-2">
                       {experience.achievements.map((achievement, index) => (
                         <li key={index} className="flex items-start">
-                          <span className="text-blue-600 mr-2 mt-1 font-bold">•</span>
-                          <span className="text-gray-700">{achievement}</span>
+                          <span className="text-linen-400 mr-2 mt-1 font-bold">•</span>
+                          <span className="text-timberwolf-200">{achievement}</span>
                         </li>
                       ))}
                     </ul>
@@ -87,8 +87,8 @@ export function Experience() {
                   
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <Code size={18} className="text-blue-600" />
-                      <h4 className="text-lg font-semibold text-black">
+                      <Code size={18} className="text-linen-400" />
+                      <h4 className="text-lg font-semibold text-timberwolf-100">
                         Technologies & Skills
                       </h4>
                     </div>

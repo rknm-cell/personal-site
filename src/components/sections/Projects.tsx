@@ -14,13 +14,13 @@ import Image from 'next/image';
 
 export function Projects() {
   return (
-    <Section id="projects" className="bg-gray-50">
+    <Section id="projects" className="bg-isabelline-600">
       <AnimatedSection>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-timberwolf-100 mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-timberwolf-200 max-w-2xl mx-auto">
             Showcasing my work in AI integration, full-stack development, and mobile applications
           </p>
         </div>
@@ -30,14 +30,14 @@ export function Projects() {
             <Card key={project.id} className="overflow-hidden border-0 shadow-lg">
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-4">
-                  <Avatar className="h-12 w-12 border-2 border-gray-200">
+                  <Avatar className="h-12 w-12 border-2 border-timberwolf-300">
                     <AvatarImage src={`/projects/${project.id}.jpg`} alt={project.title} />
-                    <AvatarFallback className="text-sm font-bold bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                    <AvatarFallback className="text-sm font-bold bg-gradient-to-r from-linen-400 to-champagne-pink-400 text-timberwolf-100">
                       {project.title.charAt(0)}
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <CardTitle className="text-2xl font-bold text-black">
+                    <CardTitle className="text-2xl font-bold text-timberwolf-100">
                       {project.title}
                     </CardTitle>
                     {project.featured && (
@@ -55,8 +55,8 @@ export function Projects() {
                   {/* Project Image */}
                   <div className="space-y-4">
                     {project.imageUrl ? (
-                      <div className="bg-gray-100 rounded-lg overflow-hidden">
-                        <div className="bg-gray-200 px-4 py-2 text-sm text-gray-600 border-b flex items-center gap-2">
+                      <div className="bg-isabelline-600 rounded-lg overflow-hidden">
+                        <div className="bg-isabelline-500 px-4 py-2 text-sm text-timberwolf-200 border-b border-timberwolf-300 flex items-center gap-2">
                           <Globe size={14} />
                           Live Preview - {project.title}
                         </div>
@@ -72,8 +72,8 @@ export function Projects() {
                         </div>
                       </div>
                     ) : (
-                      <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-                        <div className="text-center text-gray-500">
+                      <div className="bg-isabelline-500 rounded-lg h-64 flex items-center justify-center">
+                        <div className="text-center text-timberwolf-300">
                           <div className="text-4xl mb-2">📱</div>
                           <p>Project Screenshot</p>
                           <p className="text-sm">{project.title}</p>
@@ -85,7 +85,7 @@ export function Projects() {
                   {/* Project Details */}
                   <div className="space-y-6">
                     <div>
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-timberwolf-200 mb-4">
                         {project.longDescription}
                       </p>
                     </div>
@@ -93,8 +93,8 @@ export function Projects() {
                     {/* Technologies */}
                     <div>
                       <div className="flex items-center gap-2 mb-3">
-                        <Code size={18} className="text-blue-600" />
-                        <h4 className="text-lg font-semibold text-black">
+                        <Code size={18} className="text-linen-400" />
+                        <h4 className="text-lg font-semibold text-timberwolf-100">
                           Technologies
                         </h4>
                       </div>
@@ -120,25 +120,25 @@ export function Projects() {
                     {project.caseStudy && (
                       <div>
                         <div className="flex items-center gap-2 mb-3">
-                          <Target size={18} className="text-blue-600" />
-                          <h4 className="text-lg font-semibold text-black">
+                          <Target size={18} className="text-linen-400" />
+                          <h4 className="text-lg font-semibold text-timberwolf-100">
                             Case Study
                           </h4>
                         </div>
                         <div className="space-y-3">
                           <div>
-                            <h5 className="font-medium text-black flex items-center gap-1">
-                              <span className="text-red-500">•</span>
+                            <h5 className="font-medium text-timberwolf-100 flex items-center gap-1">
+                              <span className="text-red-400">•</span>
                               Problem
                             </h5>
-                            <p className="text-gray-600 text-sm ml-4">{project.caseStudy.problem}</p>
+                            <p className="text-timberwolf-200 text-sm ml-4">{project.caseStudy.problem}</p>
                           </div>
                           <div>
-                            <h5 className="font-medium text-black flex items-center gap-1">
-                              <span className="text-green-500">•</span>
+                            <h5 className="font-medium text-timberwolf-100 flex items-center gap-1">
+                              <span className="text-green-400">•</span>
                               Solution
                             </h5>
-                            <p className="text-gray-600 text-sm ml-4">{project.caseStudy.solution}</p>
+                            <p className="text-timberwolf-200 text-sm ml-4">{project.caseStudy.solution}</p>
                           </div>
                         </div>
                       </div>
