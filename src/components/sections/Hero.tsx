@@ -127,7 +127,7 @@ export function Hero() {
                 </a>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Let's work together</p>
+                <p>Let&apos;s work together</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

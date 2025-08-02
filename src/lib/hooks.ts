@@ -23,7 +23,7 @@ export function useActiveSection() {
           const intersectionRatio = entry.intersectionRatio;
           if (intersectionRatio > maxIntersectionRatio) {
             maxIntersectionRatio = intersectionRatio;
-            mostVisibleSection = entry.target.getAttribute('id') || '';
+            mostVisibleSection = entry.target.getAttribute('id') ?? '';
           }
         }
       });
