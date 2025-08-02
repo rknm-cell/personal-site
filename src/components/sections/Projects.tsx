@@ -6,6 +6,7 @@ import { Button } from '~/components/ui/Button';
 import { Card } from '~/components/ui/Card';
 import { AnimatedSection } from '~/components/ui/AnimatedSection';
 import { PROJECTS } from '~/lib/constants';
+import Image from 'next/image';
 
 export function Projects() {
   return (
@@ -32,7 +33,7 @@ export function Projects() {
                         Live Preview - {project.title}
                       </div>
                       <div className="relative h-96">
-                        <img
+                        <Image
                           src={project.imageUrl}
                           alt={`Screenshot of ${project.title}`}
                           className="w-full h-full object-cover"
