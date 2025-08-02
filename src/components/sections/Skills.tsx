@@ -2,8 +2,14 @@
 
 import { Section } from '~/components/ui/Section';
 import { AnimatedSection } from '~/components/ui/AnimatedSection';
+import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/Card';
+import { Badge } from '~/components/ui/badge';
+import { Separator } from '~/components/ui/separator';
+import { Avatar, AvatarFallback } from '~/components/ui/avatar';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip';
 import { SKILLS } from '~/lib/constants';
 import type { Skill } from '~/types';
+import { Code, Palette, Box, Zap, Database, Monitor } from 'lucide-react';
 
 const categoryLabels = {
   frontend: 'Frontend Development',
@@ -11,6 +17,14 @@ const categoryLabels = {
   design: 'Design & Creative',
   '3d': '3D & Manufacturing',
   ai: 'AI & Machine Learning'
+} as const;
+
+const categoryIcons = {
+  frontend: Monitor,
+  backend: Database,
+  design: Palette,
+  '3d': Box,
+  ai: Zap
 } as const;
 
 export function Skills() {
@@ -33,20 +47,45 @@ export function Skills() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Object.entries(skillsByCategory).map(([category, skills]) => (
-            <div key={category} className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-black mb-4">
-                {categoryLabels[category as keyof typeof categoryLabels]}
-              </h3>
-              <div className="space-y-3">
-                {skills.map((skill) => (
-                  <div key={skill.name} className="text-gray-700">
-                    {skill.name}
+          {Object.entries(skillsByCategory).map(([category, skills]) => {
+            const IconComponent = categoryIcons[category as keyof typeof categoryIcons];
+            
+            return (
+              <Card key={category} className="border-0 shadow-lg bg-white">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-3">
+                    <Avatar className="h-10 w-10 border-2 border-gray-200">
+                      <AvatarFallback className="text-sm font-bold bg-gray-100 text-gray-700">
+                        <IconComponent size={16} />
+                      </AvatarFallback>
+                    </Avatar>
+                    <CardTitle className="text-xl font-semibold text-black">
+                      {categoryLabels[category as keyof typeof categoryLabels]}
+                    </CardTitle>
                   </div>
-                ))}
-              </div>
-            </div>
-          ))}
+                </CardHeader>
+                
+                <CardContent>
+                  <div className="space-y-3">
+                    {skills.map((skill) => (
+                      <TooltipProvider key={skill.name}>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <Badge variant="outline" className="text-xs">
+                              {skill.name}
+                            </Badge>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>{skill.name}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </AnimatedSection>
     </Section>

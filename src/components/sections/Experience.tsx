@@ -2,7 +2,7 @@
 
 import { Section } from '~/components/ui/Section';
 import { AnimatedSection } from '~/components/ui/AnimatedSection';
-import { Card, CardContent, CardHeader } from '~/components/ui/Card';
+import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/Card';
 import { Badge } from '~/components/ui/badge';
 import { Separator } from '~/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
@@ -24,7 +24,7 @@ export function Experience() {
         </div>
 
         <div className="space-y-8">
-          {EXPERIENCE.map((experience) => (
+          {EXPERIENCE.map((experience, index) => (
             <Card key={experience.id} className="border-0 shadow-lg bg-gray-50">
               <CardHeader className="pb-4">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -36,12 +36,15 @@ export function Experience() {
                       </AvatarFallback>
                     </Avatar>
                     <div>
-                      <h3 className="text-2xl font-bold text-black">
+                      <CardTitle className="text-2xl font-bold text-black">
                         {experience.position}
-                      </h3>
+                      </CardTitle>
                       <p className="text-xl text-gray-600">
                         {experience.company}
                       </p>
+                      <Badge variant="secondary" className="mt-1 text-xs">
+                        {index === 0 ? 'Current' : 'Previous'}
+                      </Badge>
                     </div>
                   </div>
                   <div className="flex flex-col items-start md:items-end gap-1 mt-4 md:mt-0">
