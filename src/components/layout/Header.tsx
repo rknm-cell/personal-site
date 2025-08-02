@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { NAVIGATION } from '~/lib/constants';
 import { Button } from '~/components/ui/Button';
+import { NavigationToggle } from '~/components/ui/NavigationToggle';
 import { useActiveSection, useIsMobile } from '~/lib/hooks';
 
 export function Header() {
