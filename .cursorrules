@@ -1,0 +1,95 @@
+# Cursor Rules for Bun + Next.js TypeScript Project
+
+## Package Management
+- Always use `bun` instead of `npm` or `yarn` for package management
+- Use `bun install` to install dependencies
+- Use `bun add <package>` to add new dependencies
+- Use `bun add -d <package>` to add dev dependencies
+- Use `bun remove <package>` to remove dependencies
+- Use `bun run <script>` to run scripts from package.json
+
+## Development Commands
+- Use `bun run dev` to start the development server
+- Use `bun run build` to build the project
+- Use `bun run start` to start the production server
+- Use `bun run lint` to run ESLint
+- Use `bun run lint:fix` to fix linting issues
+- Use `bun run typecheck` to run TypeScript type checking
+- Use `bun run format:write` to format code with Prettier
+- Use `bun run format:check` to check code formatting
+
+## Project Structure
+- This is a Next.js 15 project with TypeScript
+- Uses Tailwind CSS for styling
+- Uses Framer Motion for animations
+- Uses Three.js with React Three Fiber for 3D graphics
+- Uses ESLint and Prettier for code quality
+- Uses Zod for runtime type validation
+
+## Code Style & Best Practices
+- Use TypeScript for all new code
+- **NEVER use `any` type - always create proper TypeScript types**
+- Create specific interfaces and types for all data structures
+- Use `unknown` instead of `any` when the type is truly unknown
+- Use proper type guards and type assertions when needed
+- Follow Next.js 15 App Router conventions
+- Use Tailwind CSS utility classes for styling
+- Use Framer Motion for animations when needed
+- Use React Three Fiber for 3D graphics
+- Use Zod schemas for form validation and API responses
+- Use `clsx` and `tailwind-merge` for conditional styling
+- Use Lucide React for icons
+
+## File Organization
+- Keep components in `src/components/`
+- Keep pages in `src/app/`
+- Keep utilities in `src/lib/`
+- Keep types in `src/types/`
+- Keep styles in `src/styles/`
+- Keep data in `src/data/`
+
+## Performance & Optimization
+- Use Next.js Image component for optimized images
+- Use dynamic imports for code splitting
+- Use React.memo for expensive components
+- Use useMemo and useCallback for expensive computations
+- Use Bun's fast package installation and execution
+
+## Testing & Quality
+- Run `bun run check` to run both linting and type checking
+- Ensure all TypeScript errors are resolved before committing
+- Follow the existing code style and formatting
+- Use meaningful component and variable names
+- Add proper TypeScript types for all functions and components
+- **Type Safety Rules:**
+  - Never use `any` type - create specific types instead
+  - Use `unknown` for truly unknown data, then narrow with type guards
+  - Create interfaces for all object structures
+  - Use union types for multiple possible values
+  - Use generics for reusable type-safe components
+  - Prefer `Record<string, unknown>` over `any` for object maps
+
+## Dependencies
+- Prefer Bun-compatible packages
+- Use the latest stable versions of packages
+- Keep dependencies up to date with `bun update`
+- Use `bun.lock` for dependency locking (not package-lock.json)
+
+## Environment & Configuration
+- Use environment variables for configuration
+- Follow Next.js environment variable conventions
+- Use TypeScript for configuration files when possible
+- Keep configuration files in the root directory
+
+## Git & Version Control
+- Commit `bun.lock` file to version control
+- Don't commit `node_modules/` or `.next/`
+- Use meaningful commit messages
+- Follow conventional commit format when possible
+
+## Development Workflow
+1. Use `bun install` to install dependencies
+2. Use `bun run dev` to start development
+3. Use `bun run build` to test production build
+4. Use `bun run lint` and `bun run typecheck` before committing
+5. Use `bun run format:write` to format code 

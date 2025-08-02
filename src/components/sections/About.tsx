@@ -2,6 +2,13 @@
 
 import { Section } from '~/components/ui/Section';
 import { AnimatedSection } from '~/components/ui/AnimatedSection';
+import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/Card';
+import { Badge } from '~/components/ui/badge';
+import { Separator } from '~/components/ui/separator';
+import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip';
+import { SITE_CONFIG } from '~/lib/constants';
+import { Award, Users, Palette, Code, Zap } from 'lucide-react';
 
 export function About() {
   return (
@@ -9,9 +16,18 @@ export function About() {
       <AnimatedSection>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
-              About Me
-            </h2>
+            <div className="flex items-center gap-4 mb-6">
+              <Avatar className="h-12 w-12 border-2 border-gray-200">
+                <AvatarImage src="/avatar.jpg" alt={SITE_CONFIG.name} />
+                <AvatarFallback className="text-sm font-bold bg-gray-100 text-gray-700">
+                  {SITE_CONFIG.name.split(' ').map(n => n[0]).join('')}
+                </AvatarFallback>
+              </Avatar>
+              <h2 className="text-3xl md:text-4xl font-bold text-black">
+                About Me
+              </h2>
+            </div>
+            
             <div className="space-y-4 text-gray-600">
               <p>
                 I&apos;m a Design Engineer with a unique background that bridges the gap between 
@@ -31,32 +47,97 @@ export function About() {
                 aesthetic appeal with technical excellence.
               </p>
             </div>
+
+            <Separator className="my-6" />
+
+            {/* Skills Badges */}
+            <div className="flex flex-wrap gap-2">
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Badge variant="secondary" className="text-xs">
+                      <Palette size={12} className="mr-1" />
+                      Design
+                    </Badge>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Artistic & UX Design</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Badge variant="outline" className="text-xs">
+                      <Code size={12} className="mr-1" />
+                      Development
+                    </Badge>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Full-Stack Development</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Badge variant="secondary" className="text-xs">
+                      <Zap size={12} className="mr-1" />
+                      AI Integration
+                    </Badge>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>AI & Machine Learning</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Badge variant="outline" className="text-xs">
+                      <Users size={12} className="mr-1" />
+                      3D Printing
+                    </Badge>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>MSLA & FDM Technologies</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
           </div>
-          <div className="bg-gray-100 rounded-lg p-8">
-            <h3 className="text-xl font-semibold text-black mb-4">Key Highlights</h3>
-            <ul className="space-y-3 text-gray-600">
-              <li className="flex items-start">
-                <span className="text-black mr-2">•</span>
-                4 years at SFDS (Brooklyn, NY) - Artist to Technical Specialist
-              </li>
-              <li className="flex items-start">
-                <span className="text-black mr-2">•</span>
-                High-profile client work: Dior, Hermes, Ogilvy, Madame Tussaud&apos;s
-              </li>
-              <li className="flex items-start">
-                <span className="text-black mr-2">•</span>
-                Specialized in MSLA and FDM 3D printing technologies
-              </li>
-              <li className="flex items-start">
-                <span className="text-black mr-2">•</span>
-                Freelance projects for Pfizer and Rivian
-              </li>
-              <li className="flex items-start">
-                <span className="text-black mr-2">•</span>
-                Full-stack development with AI integration focus
-              </li>
-            </ul>
-          </div>
+
+          <Card className="border-0 shadow-lg bg-gray-50">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-xl font-semibold text-black">
+                <Award size={20} className="text-blue-600" />
+                Key Highlights
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2 font-bold">•</span>
+                  Full-stack development with AI integration focus
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2 font-bold">•</span>
+                  4 years at SFDS (Brooklyn, NY) - Artist to Technical Specialist
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2 font-bold">•</span>
+                  High-profile client work: Dior, Hermes, Ogilvy, Madame Tussaud&apos;s
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2 font-bold">•</span>
+                  Freelance projects for Pfizer and Rivian
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
         </div>
       </AnimatedSection>
     </Section>

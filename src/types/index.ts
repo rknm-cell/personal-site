@@ -42,4 +42,19 @@ export interface BlogPost {
   publishedAt: string;
   tags: string[];
   slug: string;
+}
+
+export interface RSSFeedItem {
+  title: string;
+  link: string;
+  description: string;
+  pubDate: string;
+  guid: string;
+}
+
+export interface RSSFeedData {
+  title: string;
+  description: string;
+  link: string;
+  items: RSSFeedItem[];
 } 

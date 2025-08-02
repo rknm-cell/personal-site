@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { NAVIGATION } from '~/lib/constants';
 import { useActiveSection, useIsMobile } from '~/lib/hooks';
 import { cn } from '~/lib/utils';
+import { Badge } from '~/components/ui/badge';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip';
 
 interface NavigationToggleProps {
   className?: string;
@@ -40,13 +42,13 @@ export function NavigationToggle({ className = '' }: NavigationToggleProps) {
   return (
     <div className={cn("flex justify-center items-center", className)}>
       <MotionComponent
-        className="relative flex h-12 w-96 rounded-xl bg-white shadow-sm border border-gray-100"
+        className="relative flex h-12 w-96 rounded-xl bg-isabelline-500 shadow-sm border border-timberwolf-300"
         whileHover={shouldAnimate ? { scale: 1.02 } : undefined}
         transition={{ duration: 0.2 }}
       >
         {/* Slider */}
         <motion.div
-          className="absolute top-1 left-1 h-10 w-16 bg-gray-100 rounded-lg shadow-sm"
+          className="absolute top-1 left-1 h-10 w-16 bg-linen-500 rounded-lg shadow-sm"
           animate={{
             x: selectedIndex * 64, // 64px per item (w-16)
           }}
@@ -67,17 +69,31 @@ export function NavigationToggle({ className = '' }: NavigationToggleProps) {
               onChange={() => handleToggle(index)}
               className="sr-only"
             />
-            <label
-              htmlFor={`nav-${index}`}
-              className={cn(
-                "flex items-center justify-center w-full h-full cursor-pointer text-sm font-medium transition-colors duration-200 relative z-10",
-                selectedIndex === index 
-                  ? "text-black" 
-                  : "text-gray-600 hover:text-gray-900"
-              )}
-            >
-              {item.name}
-            </label>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <label
+                    htmlFor={`nav-${index}`}
+                    className={cn(
+                      "flex items-center justify-center w-full h-full cursor-pointer text-sm font-medium transition-colors duration-200 relative z-10",
+                      selectedIndex === index 
+                        ? "text-timberwolf-100" 
+                        : "text-timberwolf-200 hover:text-timberwolf-100"
+                    )}
+                  >
+                    {item.name}
+                    {selectedIndex === index && (
+                      <Badge variant="secondary" className="ml-1 text-xs bg-champagne-pink-400 text-timberwolf-100">
+                        Active
+                      </Badge>
+                    )}
+                  </label>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Go to {item.name} section</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
         ))}
       </MotionComponent>
