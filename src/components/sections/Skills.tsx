@@ -35,13 +35,13 @@ export function Skills() {
   }, {} as Record<string, Skill[]>);
 
   return (
-    <Section id="skills" className="bg-gray-50">
+    <Section id="skills" className="bg-isabelline-600">
       <AnimatedSection>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-timberwolf-100 mb-4">
             Skills & Expertise
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-timberwolf-200 max-w-2xl mx-auto">
             A diverse skill set spanning technical development, design, and 3D manufacturing
           </p>
         </div>
@@ -51,15 +51,15 @@ export function Skills() {
             const IconComponent = categoryIcons[category as keyof typeof categoryIcons];
             
             return (
-              <Card key={category} className="border-0 shadow-lg bg-white">
+              <Card key={category} className="border-0 shadow-lg bg-isabelline-500">
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-3">
-                    <Avatar className="h-10 w-10 border-2 border-gray-200">
-                      <AvatarFallback className="text-sm font-bold bg-gray-100 text-gray-700">
+                    <Avatar className="h-10 w-10 border-2 border-timberwolf-300">
+                      <AvatarFallback className="text-sm font-bold bg-timberwolf-100 text-isabelline-500">
                         <IconComponent size={16} />
                       </AvatarFallback>
                     </Avatar>
-                    <CardTitle className="text-xl font-semibold text-black">
+                    <CardTitle className="text-xl font-semibold text-timberwolf-100">
                       {categoryLabels[category as keyof typeof categoryLabels]}
                     </CardTitle>
                   </div>

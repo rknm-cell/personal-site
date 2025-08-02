@@ -13,33 +13,33 @@ import { SITE_CONFIG } from '~/lib/constants';
 
 export function Contact() {
   return (
-    <Section id="contact" className="bg-gray-50">
+    <Section id="contact" className="bg-isabelline-600">
       <AnimatedSection>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-timberwolf-100 mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-timberwolf-200 max-w-2xl mx-auto">
             I&apos;m always interested in new opportunities and collaborations. 
             Let&apos;s discuss how we can work together.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="border-0 shadow-lg bg-white">
+          <Card className="border-0 shadow-lg bg-isabelline-500">
             <CardHeader className="pb-6">
               <div className="flex items-center gap-4">
-                <Avatar className="h-12 w-12 border-2 border-gray-200">
+                <Avatar className="h-12 w-12 border-2 border-timberwolf-300">
                   <AvatarImage src="/avatar.jpg" alt={SITE_CONFIG.name} />
-                  <AvatarFallback className="text-sm font-bold bg-gray-100 text-gray-700">
+                  <AvatarFallback className="text-sm font-bold bg-timberwolf-100 text-isabelline-500">
                     {SITE_CONFIG.name.split(' ').map(n => n[0]).join('')}
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <CardTitle className="text-2xl font-bold text-black">
+                  <CardTitle className="text-2xl font-bold text-timberwolf-100">
                     Let&apos;s Connect
                   </CardTitle>
-                  <p className="text-gray-600">Ready to discuss your project?</p>
+                  <p className="text-timberwolf-200">Ready to discuss your project?</p>
                 </div>
               </div>
             </CardHeader>
@@ -49,8 +49,8 @@ export function Contact() {
                 {/* Contact Info */}
                 <div>
                   <div className="flex items-center gap-2 mb-4">
-                    <User size={18} className="text-blue-600" />
-                    <h3 className="text-xl font-semibold text-black">
+                    <User size={18} className="text-linen-400" />
+                    <h3 className="text-xl font-semibold text-timberwolf-100">
                       Contact Information
                     </h3>
                   </div>
@@ -60,7 +60,7 @@ export function Contact() {
                         <TooltipTrigger asChild>
                           <a
                             href={`mailto:${SITE_CONFIG.email}`}
-                            className="flex items-center text-gray-600 hover:text-black transition-colors p-2 rounded-md hover:bg-gray-50"
+                            className="flex items-center text-timberwolf-200 hover:text-timberwolf-100 transition-colors p-2 rounded-md hover:bg-isabelline-600"
                           >
                             <Mail size={20} className="mr-3" />
                             {SITE_CONFIG.email}
@@ -79,7 +79,7 @@ export function Contact() {
                             href={SITE_CONFIG.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center text-gray-600 hover:text-black transition-colors p-2 rounded-md hover:bg-gray-50"
+                            className="flex items-center text-timberwolf-200 hover:text-timberwolf-100 transition-colors p-2 rounded-md hover:bg-isabelline-600"
                           >
                             <Github size={20} className="mr-3" />
                             GitHub Profile
@@ -98,7 +98,7 @@ export function Contact() {
                             href={SITE_CONFIG.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center text-gray-600 hover:text-black transition-colors p-2 rounded-md hover:bg-gray-50"
+                            className="flex items-center text-timberwolf-200 hover:text-timberwolf-100 transition-colors p-2 rounded-md hover:bg-isabelline-600"
                           >
                             <Linkedin size={20} className="mr-3" />
                             LinkedIn Profile
@@ -115,26 +115,26 @@ export function Contact() {
                 {/* Availability */}
                 <div>
                   <div className="flex items-center gap-2 mb-4">
-                    <Calendar size={18} className="text-green-600" />
-                    <h3 className="text-xl font-semibold text-black">
+                    <Calendar size={18} className="text-linen-400" />
+                    <h3 className="text-xl font-semibold text-timberwolf-100">
                       Availability
                     </h3>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-700">Available for new projects</span>
+                      <span className="text-timberwolf-200">Available for new projects</span>
                       <Badge variant="default" className="text-xs">
                         Available
                       </Badge>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-700">Open to freelance opportunities</span>
+                      <span className="text-timberwolf-200">Open to freelance opportunities</span>
                       <Badge variant="secondary" className="text-xs">
                         Open
                       </Badge>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-700">Interested in full-time roles</span>
+                      <span className="text-timberwolf-200">Interested in full-time roles</span>
                       <Badge variant="outline" className="text-xs">
                         Interested
                       </Badge>
@@ -147,8 +147,8 @@ export function Contact() {
 
               <div className="text-center">
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <MessageSquare size={18} className="text-blue-600" />
-                  <p className="text-gray-600">
+                  <MessageSquare size={18} className="text-linen-400" />
+                  <p className="text-timberwolf-200">
                     Let&apos;s discuss your project or explore collaboration opportunities
                   </p>
                 </div>

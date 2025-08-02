@@ -15,13 +15,13 @@ export function Blog() {
   const { data, loading, error } = useRSSFeed(RSS_FEED_URL);
 
   return (
-    <Section id="blog" className="bg-white">
+    <Section id="blog" className="bg-isabelline-500">
       <AnimatedSection>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-timberwolf-100 mb-4">
             Blog & Insights
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-timberwolf-200 max-w-2xl mx-auto">
             Thoughts on design, development, and the intersection of AI with creative work
           </p>
         </div>
@@ -36,10 +36,10 @@ export function Blog() {
           <div className="text-center py-12">
             <div className="max-w-md mx-auto">
               <div className="text-6xl mb-4">⚠️</div>
-              <h3 className="text-xl font-semibold text-black mb-2">
+              <h3 className="text-xl font-semibold text-timberwolf-100 mb-2">
                 Unable to Load Blog Posts
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-timberwolf-200 mb-6">
                 {error}
               </p>
               <Button 
@@ -57,16 +57,16 @@ export function Blog() {
             {data.items.slice(0, 6).map((post, index) => (
               <Card key={`${post.title}-${post.pubDate}-${index}`} className="h-full hover:shadow-lg transition-shadow duration-300">
                 <div className="p-6 h-full flex flex-col">
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                  <div className="flex items-center gap-2 text-sm text-timberwolf-300 mb-3">
                     <Calendar className="w-4 h-4" />
                     <span>{formatDate(post.pubDate)}</span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-black mb-3 line-clamp-2">
+                  <h3 className="text-xl font-semibold text-timberwolf-100 mb-3 line-clamp-2">
                     {post.title}
                   </h3>
                   
-                  <p className="text-gray-600 mb-4 flex-grow line-clamp-3">
+                  <p className="text-timberwolf-200 mb-4 flex-grow line-clamp-3">
                     {post.description}
                   </p>
                   
@@ -91,10 +91,10 @@ export function Blog() {
           <div className="text-center py-12">
             <div className="max-w-md mx-auto">
               <div className="text-6xl mb-4">📝</div>
-              <h3 className="text-xl font-semibold text-black mb-2">
+              <h3 className="text-xl font-semibold text-timberwolf-100 mb-2">
                 No Posts Available
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-timberwolf-200 mb-6">
                 No blog posts are currently available from the RSS feed.
               </p>
               <Button 
