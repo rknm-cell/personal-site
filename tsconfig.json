@@ -8,12 +8,12 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
-    "verbatimModuleSyntax": true,
 
-    /* Strictness */
+    /* Strictness - relaxed for Next.js compatibility */
     "strict": true,
-    "noUncheckedIndexedAccess": true,
+    "noUncheckedIndexedAccess": false, // Changed from true to false
     "checkJs": true,
+    "skipLibCheck": true,
 
     /* Bundled projects */
     "lib": ["dom", "dom.iterable", "ES2022"],

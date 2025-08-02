@@ -16,7 +16,7 @@ const categoryLabels = {
 export function Skills() {
   const skillsByCategory = SKILLS.reduce((acc, skill) => {
     acc[skill.category] ??= [];
-    acc[skill.category]!.push(skill);
+    acc[skill.category].push(skill);
     return acc;
   }, {} as Record<string, Skill[]>);
 

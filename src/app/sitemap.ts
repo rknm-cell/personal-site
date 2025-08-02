@@ -1,8 +1,7 @@
 import type { MetadataRoute } from 'next'
-import { SITE_CONFIG } from '~/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://peteryelton.dev' // Updated to your domain
+  const baseUrl = 'https://peteryelton.dev'
   
   return [
     {

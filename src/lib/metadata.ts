@@ -1,12 +1,11 @@
-import { Metadata } from 'next'
-import { SITE_CONFIG } from './constants'
+import type { Metadata } from 'next'
 
 export function generateMetadata(
   title: string,
   description: string,
-  path: string = ''
+  path = '' // Fixed: removed type annotation
 ): Metadata {
-  const url = `https://your-domain.com${path}` // Replace with your domain
+  const url = `https://peteryelton.dev${path}`
   
   return {
     title,

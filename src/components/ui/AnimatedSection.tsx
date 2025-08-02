@@ -24,7 +24,7 @@ export function AnimatedSection({ children, className = "", delay = 0 }: Animate
         delayChildren: delay + 0.1
       }
     }
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -32,13 +32,13 @@ export function AnimatedSection({ children, className = "", delay = 0 }: Animate
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 20,
         duration: 0.6
       }
     }
-  };
+  } as const;
 
   const MotionComponent = shouldAnimate ? motion.div : 'div';
 

@@ -1,4 +1,4 @@
-import { SITE_CONFIG, PROJECTS, EXPERIENCE } from '~/lib/constants';
+import { SITE_CONFIG, PROJECTS } from '~/lib/constants';
 
 export function StructuredData() {
   const personSchema = {
@@ -7,7 +7,7 @@ export function StructuredData() {
     "name": SITE_CONFIG.name,
     "jobTitle": SITE_CONFIG.title,
     "description": SITE_CONFIG.description,
-    "url": "https://your-domain.com", // Replace with your domain
+    "url": "https://peteryelton.dev",
     "sameAs": [
       SITE_CONFIG.github,
       SITE_CONFIG.linkedin
@@ -33,7 +33,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": `${SITE_CONFIG.name} Portfolio`,
-    "url": "https://your-domain.com", // Replace with your domain
+    "url": "https://peteryelton.dev",
     "description": SITE_CONFIG.description,
     "author": {
       "@type": "Person",
@@ -46,13 +46,13 @@ export function StructuredData() {
     "@type": "CreativeWork",
     "name": project.title,
     "description": project.description,
-    "url": project.liveUrl || project.githubUrl,
+    "url": project.liveUrl ?? project.githubUrl, // Fixed: use nullish coalescing
     "author": {
       "@type": "Person",
       "name": SITE_CONFIG.name
     },
     "keywords": project.technologies.join(", "),
-    "dateCreated": "2024", // Add actual dates
+    "dateCreated": "2024",
     "genre": project.category
   }));
 

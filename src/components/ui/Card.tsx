@@ -14,15 +14,29 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     const isMobile = useIsMobile();
     const shouldAnimate = !isMobile;
 
-    const MotionComponent = shouldAnimate ? motion.div : 'div';
+    if (shouldAnimate) {
+      return (
+        <motion.div
+          whileHover={{ 
+            rotateX: 2, 
+            rotateY: 2,
+            transition: { duration: 0.2 }
+          }}
+          className={cn(
+            'rounded-lg p-6',
+            {
+              'bg-white shadow-sm': variant === 'default',
+              'border border-gray-200 bg-white': variant === 'outlined',
+            },
+            className
+          )}
+          ref={ref}
+        />
+      );
+    }
 
     return (
-      <MotionComponent
-        whileHover={shouldAnimate ? { 
-          rotateX: 2, 
-          rotateY: 2,
-          transition: { duration: 0.2 }
-        } : undefined}
+      <div
         className={cn(
           'rounded-lg p-6',
           {

@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { Button } from '~/components/ui/Button';
 import { Section } from '~/components/ui/Section';
 import { SITE_CONFIG } from '~/lib/constants';
-import { HelmetBackground } from '~/components/3d/HelmetBackground';
-import { AsciiHelmetBackground } from '~/components/3d/AsciiHelmetBackground';
 import { useIsMobile } from '~/lib/hooks';
 
 export function Hero() {
@@ -38,8 +36,6 @@ export function Hero() {
 
   return (
     <Section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white/90 to-gray-50/90 relative overflow-hidden">
-      
-      
       <MotionComponent 
         className="text-center max-w-4xl mx-auto relative z-10"
         variants={shouldAnimate ? containerVariants : undefined}
