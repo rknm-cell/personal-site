@@ -2,30 +2,149 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+@layer base {
+  :root {
+    --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: theme('colors.isabelline.500');
+    color: theme('colors.timberwolf.100');
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: theme('colors.isabelline.600');
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.pale-dogwood.500');
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.pale-dogwood.400');
+  }
+
+  /* Focus styles for accessibility */
+  *:focus {
+    outline: 2px solid theme('colors.champagne-pink.400');
+    outline-offset: 2px;
+  }
+
+  /* Selection styles */
+  ::selection {
+    background-color: theme('colors.linen.400');
+    color: theme('colors.timberwolf.100');
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: #F3F4F6;
+@layer components {
+  /* Design System Components */
+  .card {
+    @apply bg-isabelline-600 border border-timberwolf-300 rounded-xl p-6 shadow-gentle transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply -translate-y-0.5 shadow-warm;
+  }
+
+  .button-primary {
+    @apply bg-linen-500 text-timberwolf-100 border-2 border-linen-400 rounded-lg px-6 py-3 font-semibold transition-all duration-300 cursor-pointer;
+  }
+
+  .button-primary:hover {
+    @apply bg-linen-400 -translate-y-0.5 shadow-lg;
+  }
+
+  .button-secondary {
+    @apply bg-transparent text-timberwolf-200 border-2 border-timberwolf-300 rounded-lg px-6 py-3 font-semibold transition-all duration-300 cursor-pointer;
+  }
+
+  .button-secondary:hover {
+    @apply bg-timberwolf-100 text-isabelline-600;
+  }
+
+  /* Whimsical elements with new color palette */
+  .whimsical-border {
+    @apply border-2 border-champagne-pink-400 rounded-xl relative bg-isabelline-600;
+  }
+
+  .whimsical-border::before {
+    content: '';
+    @apply absolute -top-1 -left-1 -right-1 -bottom-1 border border-champagne-pink-300 rounded-2xl opacity-30 -z-10;
+  }
+
+  /* Text styles */
+  .text-heading {
+    @apply text-timberwolf-100 font-bold;
+  }
+
+  .text-body {
+    @apply text-timberwolf-200;
+  }
+
+  .text-accent {
+    @apply text-pale-dogwood-400;
+  }
+
+  /* Gradient backgrounds */
+  .gradient-warm {
+    @apply bg-gradient-to-br from-linen-500 to-champagne-pink-500;
+  }
+
+  .gradient-neutral {
+    @apply bg-gradient-to-br from-isabelline-500 to-timberwolf-500;
+  }
+
+  .gradient-accent {
+    @apply bg-gradient-to-br from-champagne-pink-500 to-pale-dogwood-500;
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background: #6B7280;
-  border-radius: 4px;
+@layer utilities {
+  /* Animation classes */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+  }
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #4B5563;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom animations */
+/* Enhanced animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -68,31 +187,20 @@ html {
   }
 }
 
-/* Animation classes */
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-.animate-slide-in-left {
-  animation: slideInLeft 0.6s ease-out;
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 0.6s ease-out;
-}
-
-/* Focus styles for accessibility */
-*:focus {
-  outline: 2px solid #6B7280;
-  outline-offset: 2px;
-}
-
-/* Selection styles */
-::selection {
-  background-color: #6B7280;
-  color: #FFFFFF;
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
