@@ -36,6 +36,8 @@ export function Projects() {
                         <Image
                           src={project.imageUrl}
                           alt={`Screenshot of ${project.title}`}
+                          width={800}
+                          height={600}
                           className="w-full h-full object-cover"
                           loading="lazy"
                         />
@@ -101,26 +103,25 @@ export function Projects() {
 
                   {/* Project Links */}
                   <div className="flex flex-wrap gap-3">
-                    <Button
+                    <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      variant="outline"
-                      size="sm"
+                      className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
                     >
                       <Github size={16} className="mr-2" />
                       View Code
-                    </Button>
+                    </a>
                     {project.liveUrl && (
-                      <Button
+                      <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        size="sm"
+                        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-8 rounded-md px-3 text-xs"
                       >
                         <ExternalLink size={16} className="mr-2" />
                         Live Demo
-                      </Button>
+                      </a>
                     )}
                   </div>
                 </div>
