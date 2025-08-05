@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
     longDescription: 'A React Native/Expo mobile application that brings the AI recipe experience to mobile devices with offline capabilities and enhanced mobile-specific features.',
     technologies: ['React Native', 'Expo', 'TypeScript', 'AI Integration', 'Offline Support'],
     githubUrl: 'https://github.com/rknm-cell/mise-cooking-app',
-    imageUrl: '/projects/mise-cooking-app.jpg',
+    imageUrl: '/images/screenshots/mise_screenshot.png',
     featured: true,
     category: 'mobile'
   }

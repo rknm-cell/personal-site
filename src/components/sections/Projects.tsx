@@ -56,17 +56,19 @@ export function Projects() {
                   <div className="space-y-4">
                     {project.imageUrl ? (
                       <div className="bg-isabelline-600 rounded-lg overflow-hidden">
-                        <div className="bg-isabelline-500 px-4 py-2 text-sm text-timberwolf-200 border-b border-timberwolf-300 flex items-center gap-2">
-                          <Globe size={14} />
-                          Live Preview - {project.title}
-                        </div>
+                        {project.liveUrl && (
+                          <div className="bg-isabelline-500 px-4 py-2 text-sm text-timberwolf-200 border-b border-timberwolf-300 flex items-center gap-2">
+                            <Globe size={14} />
+                            Live Preview - {project.title}
+                          </div>
+                        )}
                         <div className="relative h-96">
                           <Image
                             src={project.imageUrl}
                             alt={`Screenshot of ${project.title}`}
                             width={800}
                             height={600}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                             loading="lazy"
                           />
                         </div>
