@@ -38,6 +38,24 @@ export const PROJECTS: Project[] = [
     imageUrl: '/images/screenshots/mise_screenshot.png',
     featured: true,
     category: 'mobile'
+  },
+  {
+    id: 'peters-world',
+    title: 'Peter\'s World',
+    description: 'Living Ecosystem Simulation - Performance-optimized 3D web application demonstrating advanced React Three Fiber usage',
+    longDescription: 'A complex 3D ecosystem simulation featuring autonomous animal behaviors using state machines, terrain deformation, and selective physics simulation supporting 50+ concurrent entities at 60fps. Built with performance engineering including Zustand state management preventing cascading re-renders, Rapier.js physics optimization, and mobile-responsive 3D rendering. Features real-time terraforming tools, dynamic ecosystem evolution, and physics-based environmental interactions.',
+    technologies: ['React Three Fiber', 'Three.js', 'Zustand', 'Rapier.js', 'TypeScript', 'Performance Optimization', '3D Graphics'],
+    githubUrl: 'https://github.com/rknm-cell/peters-world',
+    liveUrl: 'https://www.peters-world.com/',
+    imageUrl: 'https://api.microlink.io?url=https://www.peters-world.com/&screenshot=true&meta=false&embed=screenshot.url',
+    featured: true,
+    category: '3d',
+    caseStudy: {
+      problem: 'Need for a high-performance 3D ecosystem simulation that could run smoothly in browsers with complex physics and multiple entities',
+      solution: 'Built a performance-optimized 3D web application using React Three Fiber with advanced state management and selective physics simulation',
+      challenges: ['Performance optimization for 50+ concurrent entities', 'Complex physics simulation at 60fps', 'Mobile-responsive 3D rendering', 'State management for complex systems'],
+      outcomes: ['Achieved 60fps performance with 50+ entities', 'Seamless browser experience without Unity', 'Superior UI integration with React ecosystem', 'Mobile-responsive 3D application']
+    }
   }
 ];
 
