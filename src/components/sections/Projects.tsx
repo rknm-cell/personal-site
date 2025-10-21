@@ -57,21 +57,31 @@ export function Projects() {
                     {project.imageUrl ? (
                       <div className="bg-isabelline-600 rounded-lg overflow-hidden">
                         {project.liveUrl && (
-                          <div className="bg-isabelline-500 px-4 py-2 text-sm text-timberwolf-200 border-b border-timberwolf-300 flex items-center gap-2">
+                          <a 
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-isabelline-500 px-4 py-2 text-sm text-timberwolf-200 border-b border-timberwolf-300 flex items-center gap-2 hover:bg-isabelline-400 transition-colors"
+                          >
                             <Globe size={14} />
                             Live Preview - {project.title}
-                          </div>
+                          </a>
                         )}
-                        <div className="relative h-96">
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="relative h-96 block"
+                        >
                           <Image
                             src={project.imageUrl}
                             alt={`Screenshot of ${project.title}`}
                             width={800}
                             height={600}
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-contain hover:opacity-90 transition-opacity"
                             loading="lazy"
                           />
-                        </div>
+                        </a>
                       </div>
                     ) : (
                       <div className="bg-isabelline-500 rounded-lg h-64 flex items-center justify-center">
@@ -117,37 +127,7 @@ export function Projects() {
                         ))}
                       </div>
                     </div>
-
-                    {/* Case Study */}
-                    {project.caseStudy && (
-                      <div>
-                        <div className="flex items-center gap-2 mb-3">
-                          <Target size={18} className="text-linen-400" />
-                          <h4 className="text-lg font-semibold text-timberwolf-100">
-                            Case Study
-                          </h4>
-                        </div>
-                        <div className="space-y-3">
-                          <div>
-                            <h5 className="font-medium text-timberwolf-100 flex items-center gap-1">
-                              <span className="text-red-400">•</span>
-                              Problem
-                            </h5>
-                            <p className="text-timberwolf-200 text-sm ml-4">{project.caseStudy.problem}</p>
-                          </div>
-                          <div>
-                            <h5 className="font-medium text-timberwolf-100 flex items-center gap-1">
-                              <span className="text-green-400">•</span>
-                              Solution
-                            </h5>
-                            <p className="text-timberwolf-200 text-sm ml-4">{project.caseStudy.solution}</p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
                     <Separator className="my-4" />
-
                     {/* Project Links */}
                     <div className="flex flex-wrap gap-3">
                       <TooltipProvider>
