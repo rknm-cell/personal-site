@@ -12,8 +12,8 @@ export default function HomePage() {
     <Layout>
       <Hero />
       <About />
-      <Experience />
       <Projects />
+      <Experience />
       <Skills />
       <Blog />
       <Contact />
