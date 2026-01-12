@@ -40,12 +40,6 @@ export function Projects() {
                     <CardTitle className="text-2xl font-bold text-timberwolf-100">
                       {project.title}
                     </CardTitle>
-                    {project.featured && (
-                      <Badge variant="default" className="mt-1 text-xs">
-                        <Award size={10} className="mr-1" />
-                        Featured
-                      </Badge>
-                    )}
                   </div>
                 </div>
               </CardHeader>
