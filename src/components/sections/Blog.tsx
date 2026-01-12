@@ -87,7 +87,7 @@ export function Blog() {
           </div>
         )}
 
-        {data && data.items.length === 0 && (
+        {data?.items.length === 0 && (
           <div className="text-center py-12">
             <div className="max-w-md mx-auto">
               <div className="text-6xl mb-4">📝</div>
