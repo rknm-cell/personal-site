@@ -4,7 +4,14 @@ import { Suspense, useRef, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, Environment } from "@react-three/drei";
 import { Mesh } from "three";
-import type { Group } from "three";
+import type { Group, Material } from "three";
+
+// Type for the shader object passed to onBeforeCompile
+interface ShaderMaterial {
+  uniforms: Record<string, { value: unknown }>;
+  vertexShader: string;
+  fragmentShader: string;
+}
 
 // ---------------------------------------------------------------------------
 // Helmet model  –  materials patched in useEffect
@@ -16,9 +23,10 @@ function Helmet() {
   useEffect(() => {
     scene.traverse((child) => {
       if (child instanceof Mesh) {
-        const materials = Array.isArray(child.material)
-          ? child.material
-          : [child.material];
+        const material = child.material as Material | Material[];
+        const materials: Material[] = Array.isArray(material)
+          ? material
+          : [material];
 
         materials.forEach((mat) => {
           // keep everything opaque
@@ -27,7 +35,7 @@ function Helmet() {
           mat.depthWrite = true;
 
           // inject Bayer dither into the compiled fragment shader
-          mat.onBeforeCompile = (shader: { uniforms: Record<string, { value: unknown }>; fragmentShader: string }) => {
+          mat.onBeforeCompile = (shader: ShaderMaterial) => {
             shader.uniforms.uColorLevels = { value: 4.0 };
 
             // 1) Bayer lookup function – inserted right after #include <common>
