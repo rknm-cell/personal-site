@@ -1,10 +1,8 @@
 "use client";
 
-import { ExternalLink, Github, Code, Globe, Award, Target, Zap } from 'lucide-react';
+import { ExternalLink, Github, Code, Globe} from 'lucide-react';
 import { Section } from '~/components/ui/Section';
-import { Button } from '~/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/Card';
-import { Badge } from '~/components/ui/badge';
 import { Separator } from '~/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip';
@@ -109,9 +107,7 @@ export function Projects() {
                           <TooltipProvider key={index}>
                             <Tooltip>
                               <TooltipTrigger asChild>
-                                <Badge variant="secondary" className="text-xs">
-                                  {tech}
-                                </Badge>
+                              
                               </TooltipTrigger>
                               <TooltipContent>
                                 <p>Used in {project.title}</p>

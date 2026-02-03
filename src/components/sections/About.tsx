@@ -50,64 +50,6 @@ export function About() {
 
             <Separator className="my-6" />
 
-            {/* Skills Badges */}
-            <div className="flex flex-wrap gap-2">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Badge variant="secondary" className="text-xs">
-                      <Palette size={12} className="mr-1" />
-                      Design
-                    </Badge>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Artistic & UX Design</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Badge variant="outline" className="text-xs">
-                      <Code size={12} className="mr-1" />
-                      Development
-                    </Badge>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Full-Stack Development</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Badge variant="secondary" className="text-xs">
-                      <Zap size={12} className="mr-1" />
-                      AI Integration
-                    </Badge>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>AI & Machine Learning</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Badge variant="outline" className="text-xs">
-                      <Users size={12} className="mr-1" />
-                      3D Printing
-                    </Badge>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>MSLA & FDM Technologies</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </div>
           </div>
 
           <Card className="border-0 shadow-lg bg-isabelline-600">

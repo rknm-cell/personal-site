@@ -71,9 +71,6 @@ export function Skills() {
                       <TooltipProvider key={skill.name}>
                         <Tooltip>
                           <TooltipTrigger asChild>
-                            <Badge variant="outline" className="text-xs">
-                              {skill.name}
-                            </Badge>
                           </TooltipTrigger>
                           <TooltipContent>
                             <p>{skill.name}</p>

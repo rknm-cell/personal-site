@@ -72,20 +72,7 @@ export function Hero() {
           </h2>
         </MotionComponent>
 
-        {/* Skills Badges */}
-        <MotionComponent variants={shouldAnimate ? itemVariants : undefined} className="mb-8">
-          <div className="flex flex-wrap justify-center gap-2">
-            <Badge variant="secondary" className="text-xs bg-linen-500 text-timberwolf-100 border-timberwolf-300">
-              Full-Stack
-            </Badge>
-            <Badge variant="outline" className="text-xs border-champagne-pink-400 text-timberwolf-200">
-              AI Integration
-            </Badge>
-            <Badge variant="secondary" className="text-xs bg-pale-dogwood-500 text-timberwolf-100 border-timberwolf-300">
-              3D Design
-            </Badge>
-          </div>
-        </MotionComponent>
+    
         
         <MotionComponent variants={shouldAnimate ? itemVariants : undefined}>
           <p className="text-lg md:text-xl text-timberwolf-200 mb-12 max-w-2xl mx-auto">
