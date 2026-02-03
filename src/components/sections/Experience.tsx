@@ -3,7 +3,6 @@
 import { Section } from '~/components/ui/Section';
 import { AnimatedSection } from '~/components/ui/AnimatedSection';
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/Card';
-import { Badge } from '~/components/ui/badge';
 import { Separator } from '~/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip';
@@ -41,10 +40,7 @@ export function Experience() {
                       </CardTitle>
                       <p className="text-xl text-timberwolf-200">
                         {experience.company}
-                      </p>
-                      <Badge variant="secondary" className="mt-1 text-xs">
-                        {index === 0 ? 'Current' : 'Previous'}
-                      </Badge>
+                      </p>  
                     </div>
                   </div>
                   <div className="flex flex-col items-start md:items-end gap-1 mt-4 md:mt-0">
@@ -97,9 +93,6 @@ export function Experience() {
                         <TooltipProvider key={index}>
                           <Tooltip>
                             <TooltipTrigger asChild>
-                              <Badge variant="outline" className="text-xs">
-                                {tech}
-                              </Badge>
                             </TooltipTrigger>
                             <TooltipContent>
                               <p>Used at {experience.company}</p>

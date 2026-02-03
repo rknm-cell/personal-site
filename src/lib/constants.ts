@@ -85,67 +85,47 @@ export const EXPERIENCE: Experience[] = [
     id: 'fractal',
     company: 'Fractal Tech AI Accelerator',
     position: 'Software Engineering Fellow',
-    location: 'Remote',
+    location: 'Brooklyn, NY',
     duration: 'June 2025 - August 2025',
-    description: 'Intensive 60-hour/week accelerator program focused on rapid AI application development',
+    description: 'Intensive 60-hour/week accelerator focused on rapid AI application development and production deployment',
     achievements: [
-      'Delivered 3-5 pull requests daily across multiple full-stack TypeScript projects, building production-ready features with Next.js and React while maintaining code quality',
-      'Leveraged AI SDK and modern development tools to accelerate feature implementation, establishing systematic approaches to fast iteration without accumulating technical debt',
-      'Shipped multiple complete applications to production within 12-week timeframe, demonstrating ability to move from concept to deployed product rapidly'
+      'Delivered 3-5 pull requests daily across multiple full-stack TypeScript projects with Next.js and React',
+      'Shipped multiple complete AI-native applications to production within a 12-week timeframe',
+      'Leveraged AI SDK for rapid iteration while maintaining code quality and systematic development practices'
     ],
-    technologies: ['TypeScript', 'React', 'Next.js', 'AI SDK', 'Full-stack Development']
+    technologies: ['TypeScript', 'React', 'Next.js', 'AI SDK']
   },
   {
     id: 'holdfast',
     company: 'HOLDFAST-CIFARM',
-    position: 'Software Engineer Intern',
-    location: 'Remote',
+    position: 'Software Engineering Intern',
+    location: 'Brooklyn, NY',
     duration: 'July 2025',
     description: 'Built grant application system for NOAA partnership serving aquaculture research community',
     achievements: [
-      'Designed and implemented auto-saving proposal system preventing data loss during multi-session grant applications, enabling researchers to iterate on complex NOAA submissions over weeks',
-      'Established component library and design patterns using Tailwind CSS, creating consistent UI framework adopted across application for improved user experience',
-      'Built responsive proposal management interface with Next.js and TypeScript, implementing real-time draft persistence and form state management for complex multi-step workflows',
-      'Integrated Vitest testing framework ensuring reliable proposal data handling and user interaction flows'
+      'Built a responsive proposal management interface with Next.js, implementing real-time draft persistence'
     ],
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vitest', 'pnpm']
+    technologies: ['Next.js', 'TypeScript', 'React']
   },
   {
-    id: 'sfds-lead',
+    id: 'sfds',
     company: 'Scenic Fabrication Design Shop',
-    position: '3D Printing Dept Lead',
+    position: '3D Printing Department Lead',
     location: 'Brooklyn, NY',
     duration: 'January 2024 - May 2025',
-    description: 'Developed production pipeline and established department to address need for high detailed pieces for client demands',
+    description: 'Developed production pipeline and established department, transitioning from outsourcing to in-house 3D printing',
     achievements: [
-      'Developed and maintained a database of 3D prints with information relating to printers, materials used, time elapsed, quality, and issues to log successes and bottlenecks',
-      'Established department pipeline transitioning from outsourced to in-house 3D printing production',
-      'Designed and modified existing 3D models to create high quality prints with regards to art direction',
-      'Interfaced with Design, Project Management, and Scenic Department to create high quality prints implemented into production'
+      'Developed a production pipeline and established the department, transitioning from outsourcing to in-house 3D printing',
+      'Maintained a database tracking printers, materials, and quality metrics to troubleshoot production bottlenecks'
     ],
-    technologies: ['3D Printing (MSLA)', '3D Printing (FDM)', 'Blender', 'Project Management', 'Database Management']
-  },
-  {
-    id: 'sfds-artist',
-    company: 'Scenic Fabrication Design Shop',
-    position: 'Scenic Artist',
-    location: 'Brooklyn, NY',
-    duration: 'May 2021 - January 2024',
-    description: 'Executed designs for sculptural and scenic elements for high-profile brands including Macy\'s, HBO, Tiffany\'s, Hermès, Toys R Us',
-    achievements: [
-      'Interfaced with Project Managers and Designers to execute designs for sculptural and scenic elements',
-      'Coordinated with a team of artists to ensure speedy and accurate delivery of design elements',
-      'Ordered and maintained inventory of tools and materials used in the creation of scenic and sculptural elements',
-      'Researched and developed new tools and materials for use in new techniques to create a more efficient and accurate product'
-    ],
-    technologies: ['Sculptural Design', 'Project Coordination', 'Material Research', 'Art Direction']
+    technologies: ['3D Printing', 'Blender', 'Database Management', 'Production Pipeline']
   }
 ];
 
 export const NAVIGATION = [
   { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Skills', href: '#skills' },
   { name: 'Blog', href: '#blog' },
   { name: 'Contact', href: '#contact' }

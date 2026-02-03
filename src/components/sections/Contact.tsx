@@ -2,9 +2,7 @@
 
 import { Mail, Github, Linkedin, User, Calendar, MessageSquare } from 'lucide-react';
 import { Section } from '~/components/ui/Section';
-import { Button } from '~/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/Card';
-import { Badge } from '~/components/ui/badge';
 import { Separator } from '~/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip';
@@ -20,7 +18,7 @@ export function Contact() {
             Get In Touch
           </h2>
           <p className="text-lg text-timberwolf-200 max-w-2xl mx-auto">
-            I&apos;m always interested in new opportunities and collaborations. 
+            I&apos;m always interested in new opportunities and collaborations.
             Let&apos;s discuss how we can work together.
           </p>
         </div>
@@ -123,21 +121,15 @@ export function Contact() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-timberwolf-200">Available for new projects</span>
-                      <Badge variant="default" className="text-xs">
-                        Available
-                      </Badge>
+                      <span className="text-xs">Available</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-timberwolf-200">Open to freelance opportunities</span>
-                      <Badge variant="secondary" className="text-xs">
-                        Open
-                      </Badge>
+                      <span className="text-xs">Open</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-timberwolf-200">Interested in full-time roles</span>
-                      <Badge variant="outline" className="text-xs">
-                        Interested
-                      </Badge>
+                      <span className="text-xs">Interested</span>
                     </div>
                   </div>
                 </div>
