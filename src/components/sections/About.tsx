@@ -3,12 +3,10 @@
 import { Section } from '~/components/ui/Section';
 import { AnimatedSection } from '~/components/ui/AnimatedSection';
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/Card';
-import { Badge } from '~/components/ui/badge';
 import { Separator } from '~/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip';
 import { SITE_CONFIG } from '~/lib/constants';
-import { Award, Users, Palette, Code, Zap } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 export function About() {
   return (

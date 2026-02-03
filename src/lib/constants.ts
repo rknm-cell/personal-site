@@ -65,19 +65,11 @@ export const SKILLS: Skill[] = [
   { name: 'Next.js', category: 'frontend' },
   { name: 'TypeScript', category: 'frontend' },
   { name: 'Node.js', category: 'backend' },
-  { name: 'AI Integration', category: 'ai' },
   { name: 'Full-stack Development', category: 'backend' },
   
   // Design Skills
   { name: 'UI/UX Design', category: 'design' },
   { name: '3D Modeling', category: '3d' },
-  { name: '3D Printing (MSLA)', category: '3d' },
-  { name: '3D Printing (FDM)', category: '3d' },
-  { name: 'Blender', category: '3d' },
-  { name: 'Prusa Slicer', category: '3d' },
-  { name: 'Chitubox', category: '3d' },
-  { name: 'Experiential Marketing Design', category: 'design' },
-  { name: 'Sculptural Design', category: 'design' }
 ];
 
 export const EXPERIENCE: Experience[] = [
