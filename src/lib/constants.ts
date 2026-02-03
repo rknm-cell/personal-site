@@ -81,29 +81,64 @@ export const SKILLS: Skill[] = [
 ];
 
 export const EXPERIENCE: Experience[] = [
-    {id: 'fractal',
-        company: 'Fractal Tech AI Accelarator',
-        position: 'AI Engineer',
-        location: 'Brooklyn, NY',
-        duration: 'May 2025 - Present',
-        description: 'Developed Full-Stack AI-powered applications',
-        achievements: [
-        ],
-        technologies: ['Vercel AI SDK', 'Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Node.js', 'Express', 'PostgreSQL', 'Prisma']
-    },
   {
-    id: 'sfds',
-    company: 'SFDS',
-    position: 'Casting & Mold Artist | 3D Printing Engineer',
-    location: 'Brooklyn, NY',
-    duration: 'May 2021 - February 2025',
-    description: 'Started as an artist and progressed to technical roles, specializing in 3D printing and high-profile client projects.',
+    id: 'fractal',
+    company: 'Fractal Tech AI Accelerator',
+    position: 'Software Engineering Fellow',
+    location: 'Remote',
+    duration: 'June 2025 - August 2025',
+    description: 'Intensive 60-hour/week accelerator program focused on rapid AI application development',
     achievements: [
-      'Led design and production for major brands including Dior, Hermes, and Ogilvy',
-      'Developed sculptural pieces for Madame Tussaud\'s and Mariah Carey projects',
-      'Specialized in MSLA and FDM 3D printing technologies'
+      'Delivered 3-5 pull requests daily across multiple full-stack TypeScript projects, building production-ready features with Next.js and React while maintaining code quality',
+      'Leveraged AI SDK and modern development tools to accelerate feature implementation, establishing systematic approaches to fast iteration without accumulating technical debt',
+      'Shipped multiple complete applications to production within 12-week timeframe, demonstrating ability to move from concept to deployed product rapidly'
     ],
-    technologies: ['3D Printing', 'Blender', 'Design Software', 'Project Management']
+    technologies: ['TypeScript', 'React', 'Next.js', 'AI SDK', 'Full-stack Development']
+  },
+  {
+    id: 'holdfast',
+    company: 'HOLDFAST-CIFARM',
+    position: 'Software Engineer Intern',
+    location: 'Remote',
+    duration: 'July 2025',
+    description: 'Built grant application system for NOAA partnership serving aquaculture research community',
+    achievements: [
+      'Designed and implemented auto-saving proposal system preventing data loss during multi-session grant applications, enabling researchers to iterate on complex NOAA submissions over weeks',
+      'Established component library and design patterns using Tailwind CSS, creating consistent UI framework adopted across application for improved user experience',
+      'Built responsive proposal management interface with Next.js and TypeScript, implementing real-time draft persistence and form state management for complex multi-step workflows',
+      'Integrated Vitest testing framework ensuring reliable proposal data handling and user interaction flows'
+    ],
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vitest', 'pnpm']
+  },
+  {
+    id: 'sfds-lead',
+    company: 'Scenic Fabrication Design Shop',
+    position: '3D Printing Dept Lead',
+    location: 'Brooklyn, NY',
+    duration: 'January 2024 - May 2025',
+    description: 'Developed production pipeline and established department to address need for high detailed pieces for client demands',
+    achievements: [
+      'Developed and maintained a database of 3D prints with information relating to printers, materials used, time elapsed, quality, and issues to log successes and bottlenecks',
+      'Established department pipeline transitioning from outsourced to in-house 3D printing production',
+      'Designed and modified existing 3D models to create high quality prints with regards to art direction',
+      'Interfaced with Design, Project Management, and Scenic Department to create high quality prints implemented into production'
+    ],
+    technologies: ['3D Printing (MSLA)', '3D Printing (FDM)', 'Blender', 'Project Management', 'Database Management']
+  },
+  {
+    id: 'sfds-artist',
+    company: 'Scenic Fabrication Design Shop',
+    position: 'Scenic Artist',
+    location: 'Brooklyn, NY',
+    duration: 'May 2021 - January 2024',
+    description: 'Executed designs for sculptural and scenic elements for high-profile brands including Macy\'s, HBO, Tiffany\'s, Hermès, Toys R Us',
+    achievements: [
+      'Interfaced with Project Managers and Designers to execute designs for sculptural and scenic elements',
+      'Coordinated with a team of artists to ensure speedy and accurate delivery of design elements',
+      'Ordered and maintained inventory of tools and materials used in the creation of scenic and sculptural elements',
+      'Researched and developed new tools and materials for use in new techniques to create a more efficient and accurate product'
+    ],
+    technologies: ['Sculptural Design', 'Project Coordination', 'Material Research', 'Art Direction']
   }
 ];
 
