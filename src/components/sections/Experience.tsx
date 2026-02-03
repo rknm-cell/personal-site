@@ -93,6 +93,9 @@ export function Experience() {
                         <TooltipProvider key={index}>
                           <Tooltip>
                             <TooltipTrigger asChild>
+                            <span className="inline-flex items-center px-2 py-0.5 rounded bg-isabelline-100 text-timberwolf-600 text-xs font-mono font-medium border border-isabelline-300">
+                                {tech}
+                              </span>
                             </TooltipTrigger>
                             <TooltipContent>
                               <p>Used at {experience.company}</p>

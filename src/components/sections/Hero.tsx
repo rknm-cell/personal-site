@@ -1,16 +1,13 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Button } from '~/components/ui/Button';
 import { Section } from '~/components/ui/Section';
-import { Badge } from '~/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
-import { Separator } from '~/components/ui/separator';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip';
-import { Card, CardContent } from '~/components/ui/Card';
-import { SITE_CONFIG } from '~/lib/constants';
+import { SITE_CONFIG } from '~/lib/constants';  
 import { useIsMobile } from '~/lib/hooks';
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { HeroHelmet } from '~/components/sections/HeroHelmet';
 
 export function Hero() {
   const isMobile = useIsMobile();
@@ -42,7 +39,8 @@ export function Hero() {
 
   return (
     <Section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-isabelline-500/90 to-linen-500/90 relative overflow-hidden">
-      <MotionComponent 
+      {/* <HeroHelmet /> */}
+      <MotionComponent
         className="text-center max-w-4xl mx-auto relative z-10"
         variants={shouldAnimate ? containerVariants : undefined}
         initial={shouldAnimate ? "hidden" : undefined}
@@ -90,7 +88,7 @@ export function Hero() {
               <TooltipTrigger asChild>
                 <a
                   href="#projects"
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-champagne-pink-400 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-linen-500 text-timberwolf-100 shadow hover:bg-linen-400 h-10 rounded-md px-8"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-champagne-pink-400 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-linen-500 text-timberwolf-100 shadow hover:bg-linen-400 h-10 rounded-md px-8"
                 >
                   <ExternalLink size={16} className="mr-2" />
                   View Projects
@@ -107,7 +105,7 @@ export function Hero() {
               <TooltipTrigger asChild>
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-champagne-pink-400 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-timberwolf-300 bg-transparent shadow-sm hover:bg-timberwolf-100 hover:text-isabelline-500 h-10 rounded-md px-8"
+                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-champagne-pink-400 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-timberwolf-300 bg-transparent shadow-sm hover:bg-timberwolf-100 hover:text-isabelline-500 h-10 rounded-md px-8"
                 >
                   <Mail size={16} className="mr-2" />
                   Get In Touch
