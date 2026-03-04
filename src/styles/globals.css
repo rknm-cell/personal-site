@@ -46,6 +46,21 @@
     color: theme('colors.timberwolf.100');
     font-family: var(--font-sans);
     line-height: 1.6;
+    position: relative;
+  }
+
+  /* Subtle noise texture overlay for depth */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 
   /* Custom scrollbar */
@@ -108,7 +123,7 @@
 @layer components {
   /* Design System Components */
   .card {
-    @apply bg-isabelline-600 border border-timberwolf-300 rounded-xl p-6 shadow-gentle transition-all duration-300;
+    @apply bg-isabelline-600 border border-timberwolf-300 rounded-xl p-6 shadow-gentle transition-all duration-300 relative;
   }
 
   .card:hover {
@@ -116,11 +131,20 @@
   }
 
   .button-primary {
-    @apply bg-linen-500 text-timberwolf-100 border-2 border-linen-400 rounded-lg px-6 py-3 font-semibold transition-all duration-300 cursor-pointer;
+    @apply bg-linen-500 text-timberwolf-100 border-2 border-linen-400 rounded-lg px-6 py-3 font-semibold transition-all duration-300 cursor-pointer relative overflow-hidden;
   }
 
   .button-primary:hover {
     @apply bg-linen-400 -translate-y-0.5 shadow-lg;
+  }
+
+  .button-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full transition-transform duration-700;
+  }
+
+  .button-primary:hover::before {
+    @apply translate-x-full;
   }
 
   .button-secondary {
@@ -128,7 +152,7 @@
   }
 
   .button-secondary:hover {
-    @apply bg-timberwolf-100 text-isabelline-600;
+    @apply bg-timberwolf-100 text-isabelline-600 -translate-y-0.5;
   }
 
   /* Whimsical elements with new color palette */
@@ -154,17 +178,36 @@
     @apply text-pale-dogwood-400;
   }
 
-  /* Gradient backgrounds */
+  /* Gradient backgrounds with texture */
   .gradient-warm {
-    @apply bg-gradient-to-br from-linen-500 to-champagne-pink-500;
+    @apply bg-gradient-to-br from-linen-500 to-champagne-pink-500 relative;
   }
 
   .gradient-neutral {
-    @apply bg-gradient-to-br from-isabelline-500 to-timberwolf-500;
+    @apply bg-gradient-to-br from-isabelline-500 to-timberwolf-500 relative;
   }
 
   .gradient-accent {
-    @apply bg-gradient-to-br from-champagne-pink-500 to-pale-dogwood-500;
+    @apply bg-gradient-to-br from-champagne-pink-500 to-pale-dogwood-500 relative;
+  }
+
+  /* Enhanced link hover effects */
+  a:not(.no-hover-effect) {
+    @apply transition-all duration-200;
+  }
+
+  /* Glass morphism utility */
+  .glass {
+    @apply bg-white/40 backdrop-blur-md border border-white/60 shadow-lg;
+  }
+
+  /* Floating elements */
+  .float-on-hover {
+    @apply transition-transform duration-300 ease-out;
+  }
+
+  .float-on-hover:hover {
+    @apply -translate-y-2;
   }
 }
 
