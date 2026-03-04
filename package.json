@@ -28,7 +28,7 @@
     "@types/three": "^0.178.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.26.1",
+    "framer-motion": "^12.31.0",
     "lucide-react": "^0.536.0",
     "next": "^15.5.9",
     "postprocessing": "^6.38.2",
@@ -37,6 +37,7 @@
     "tailwind-merge": "^3.4.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.178.0",
+    "unframer": "4.0.5",
     "zod": "^3.25.76"
   },
   "devDependencies": {

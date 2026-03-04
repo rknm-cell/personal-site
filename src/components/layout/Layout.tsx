@@ -1,5 +1,7 @@
+"use client";
+
 import { type ReactNode } from 'react';
-import { Header } from './Header';
+import { Navigation } from './Navigation';
 import { Footer } from './Footer';
 
 interface LayoutProps {
@@ -9,8 +11,8 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1 pt-16">
+      <Navigation />
+      <main className="flex-1 pt-20">
         {children}
       </main>
       <Footer />
