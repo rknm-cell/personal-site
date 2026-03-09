@@ -65,7 +65,7 @@ export function Projects() {
 
                   {/* Image section */}
                   <div className={`lg:col-span-5 ${isEven ? '' : 'lg:col-start-8'} relative`}>
-                    <div className="aspect-video relative overflow-hidden rounded-lg lg:rounded-none">
+                    <div className={`${project.id === 'mise-cooking-app' ? 'aspect-[9/16] mx-auto max-w-xs' : 'aspect-video'} relative overflow-hidden rounded-lg lg:rounded-none`}>
                       <Work
                         title={project.title}
                         link={project.liveUrl ?? project.githubUrl}

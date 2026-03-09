@@ -42,13 +42,19 @@ export function AnimatedSection({ children, className = "", delay = 0 }: Animate
 
   const MotionComponent = shouldAnimate ? motion.div : 'div';
 
+  const motionProps = shouldAnimate
+    ? {
+        variants: containerVariants,
+        initial: "hidden" as const,
+        whileInView: "visible" as const,
+        viewport: { once: true, margin: "-100px" }
+      }
+    : {};
+
   return (
     <MotionComponent
       className={className}
-      variants={shouldAnimate ? containerVariants : undefined}
-      initial={shouldAnimate ? "hidden" : undefined}
-      whileInView={shouldAnimate ? "visible" : undefined}
-      viewport={{ once: true, margin: "-100px" }}
+      {...motionProps}
     >
       {shouldAnimate ? (
         <motion.div variants={itemVariants}>
