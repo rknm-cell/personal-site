@@ -3,7 +3,6 @@
 import { Github, Linkedin, User, MessageSquare } from 'lucide-react';
 import { Section } from '~/components/ui/Section';
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/Card';
-import { Separator } from '~/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
 import { AnimatedSection } from '~/components/ui/AnimatedSection';
 import { SITE_CONFIG } from '~/lib/constants';
